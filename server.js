@@ -1,1 +1,10 @@
-console.log("print this message to the console");
+console.log('Init Server Node.js');
+var express = require('express');
+var app = express();
+var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
+var morgan = require('morgan');
+var jwt = require('jsonwebtoken');
+var config = require('./config');
+var User = require('./app/models/user');
+var port = process.env.PORT || 8080;
